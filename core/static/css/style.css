@@ -1,0 +1,4 @@
+.bg-site{
+    background: linear-gradient(to right, rgba(0, 179, 255, 0.1), rgba(255, 255, 255, 0.08), rgba(0, 179, 255, 0.1), rgba(255, 255, 255, 0.08), rgba(0, 179, 255, 0.1));
+    transition: 0.5s all;
+}
