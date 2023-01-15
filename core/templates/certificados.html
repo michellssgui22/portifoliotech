@@ -5,59 +5,26 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         
+        {%for cer in certificados%}
         <div class="col mb-4">
           <div class="card shadow-sm bg-dark shadow">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img src="{{cer.imagem.thumb.url}}" alt="" class="bd-placeholder-img card-img-top" width="100%" height="225">
 
             <div class="card-body bg-dark text-light rounded">
-              <h4 class="card-text">Título do Certificado</h4>
-              <h6>Data: 05/03/2022</h6>
+              <h4 class="card-text">{{cer.titulo}}</h4>
+              <h6>{{cer.instituicao}}</h6>
+              <h6>Data: {{cer.dataConclusao}}</h6>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Validação</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Conteúdo</button>
+                  <a href="{{cer.urlValidacao}}" type="button" class="btn btn-sm btn-outline-secondary">URL Validação</a>
+                  <a href="#" type="button" class="btn btn-sm btn-outline-secondary">Conteúdo</a>
                 </div>
-                <small class="text-muted">9 horas</small>
+                <small class="text-muted">{{cer.cargaHoraria}} horas</small>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col mb-4">
-          <div class="card shadow-sm bg-dark shadow">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body bg-dark text-light rounded">
-              <h4 class="card-text">Título do Certificado</h4>
-              <h6>Data: 05/03/2022</h6>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Validação</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Conteúdo</button>
-                </div>
-                <small class="text-muted">9 horas</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col mb-4">
-          <div class="card shadow-sm bg-dark shadow">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body bg-dark text-light rounded">
-              <h4 class="card-text">Título do Certificado</h4>
-              <h6>Data: 05/03/2022</h6>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Validação</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Conteúdo</button>
-                </div>
-                <small class="text-muted">9 horas</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        {%endfor%}
 
       </div>
     </div>
